@@ -1,5 +1,5 @@
 {
-  description = "nodejs flake sample";
+  description = "fltk";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -16,6 +16,12 @@
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             fltk
+            gcc
+            cmake
+            doxygen
+            pkg-config
+            libGL
+            libGLU
           ];
         };
       }
